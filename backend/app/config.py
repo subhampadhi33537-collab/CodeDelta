@@ -26,11 +26,11 @@ class Settings(BaseSettings):
 
     # ── CORS ─────────────────────────────────────────────────────────────────
     # Comma-separated list of allowed origins, e.g. "http://localhost:5173"
-    ALLOWED_ORIGINS: list[AnyHttpUrl] = ["http://localhost:5173"]
+    ALLOWED_ORIGINS: str | list[str] = "http://localhost:5173"
 
-    @field_validator("ALLOWED_ORIGINS", mode="before")
+    @field_validator("ALLOWED_ORIGINS", mode="after")
     @classmethod
-    def parse_origins(cls, v: str | list) -> list:
+    def parse_origins(cls, v: str | list[str]) -> list[str]:
         if isinstance(v, str):
             return [origin.strip() for origin in v.split(",") if origin.strip()]
         return v
