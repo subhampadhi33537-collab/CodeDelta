@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* ── Design tokens ──────────────────────────────────────────────────────── */
+:root {
+  --color-bg: #0d0d10;
+  --color-surface: #16161d;
+  --color-border: #2a2a3a;
+  --color-accent: #7c6af7;
+  --color-accent-dim: #5b4fd0;
+  --color-text: #e8e8f0;
+  --color-muted: #7a7a9a;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

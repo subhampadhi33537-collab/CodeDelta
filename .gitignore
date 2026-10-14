@@ -1,0 +1,89 @@
+# ─────────────────────────────────────────────
+# CodeDelta — root .gitignore
+# ─────────────────────────────────────────────
+
+# Secrets — NEVER commit real env files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+
+# uv
+uv.lock.bak
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/build/
+*.tsbuildinfo
+.eslintcache
+.parcelcache
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Agent workspaces (generated sites — large, not source)
+workspaces/
+sandbox_workspaces/
+
+# Old prototype venv (misplaced, use backend/.venv instead)
+projectenv/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+projectenv/
+.venv/
+venv/
+__pycache__/
+
+.env
+.venv/
+__pycache__/
+node_modules/
+workspaces/
